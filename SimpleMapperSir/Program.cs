@@ -35,23 +35,21 @@ Console.WriteLine(JsonConvert.SerializeObject(building, Newtonsoft.Json.Formatti
 */
 
 
-/*
+
 // Including array to test
 
 Window window1 = new Window { Width = 100, Height = 120, Name = "Living Room Window" };
 Window window2 = new Window { Width = 80, Height = 100, Name = "Bedroom Window" };
 
 
-Room livingRoom = new Room
+Room livingRoom = new Room(100)
 {
-    RoomNumber = "101",
     Windows = new List<Window> { window1, window2 },
     Features = new string[] { "Carpet flooring", "Fireplace" }
 };
 
-Room bedroom = new Room
+Room bedroom = new Room(101)
 {
-    RoomNumber = "102",
     Windows = new List<Window> { window2 },
     Features = new string[] { "Wooden flooring", "Walk-in closet" }
 };
@@ -69,20 +67,19 @@ SimpleMapper.Copy(myHouse, myBuilding);
 Console.WriteLine("Test 2:");
 Console.WriteLine("Destination Object After Copy :");
 Console.WriteLine(JsonConvert.SerializeObject(myBuilding, Newtonsoft.Json.Formatting.Indented));
-*/
+
 
 
 
 //test 3:
-House myHouse = new House
+/*House myHouse = new House
 {
     Rooms = new List<Room[]>
     {
         new Room[]
         {
-            new Room
+            new Room(101)
             {
-                RoomNumber = "101",
                 Windows = new List<Window>
                 {
                     new Window { Width = 100, Height = 120, Name = "Living Room Window" },
@@ -93,9 +90,8 @@ House myHouse = new House
         },
         new Room[]
         {
-            new Room
+            new Room(102)
             {
-                RoomNumber = "102",
                 Windows = new List<Window>
                 {
                     new Window { Width = 80, Height = 100, Name = "Bedroom Window" }
@@ -105,12 +101,12 @@ House myHouse = new House
         }
     },
     HouseFeatures = new string[] { "Swimming pool", "Garden" }
-};
+};*/
 
-Building myBuilding = new Building();
+/*Building myBuilding = new Building();
 
 
 SimpleMapper.Copy(myHouse, myBuilding);
 Console.WriteLine("Test 2:");
 Console.WriteLine("Destination Object After Copy :");
-Console.WriteLine(JsonConvert.SerializeObject(myBuilding, Newtonsoft.Json.Formatting.Indented));
+Console.WriteLine(JsonConvert.SerializeObject(myBuilding, Newtonsoft.Json.Formatting.Indented));*/

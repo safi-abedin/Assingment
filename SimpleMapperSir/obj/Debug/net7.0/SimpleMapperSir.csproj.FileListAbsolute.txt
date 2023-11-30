@@ -1,0 +1,17 @@
+F:\Assingment\SimpleMapperSir\obj\Debug\net7.0\SimpleMapperSir.csproj.AssemblyReference.cache
+F:\Assingment\SimpleMapperSir\obj\Debug\net7.0\SimpleMapperSir.GeneratedMSBuildEditorConfig.editorconfig
+F:\Assingment\SimpleMapperSir\obj\Debug\net7.0\SimpleMapperSir.AssemblyInfoInputs.cache
+F:\Assingment\SimpleMapperSir\obj\Debug\net7.0\SimpleMapperSir.AssemblyInfo.cs
+F:\Assingment\SimpleMapperSir\obj\Debug\net7.0\SimpleMapperSir.csproj.CoreCompileInputs.cache
+F:\Assingment\SimpleMapperSir\bin\Debug\net7.0\SimpleMapperSir.exe
+F:\Assingment\SimpleMapperSir\bin\Debug\net7.0\SimpleMapperSir.deps.json
+F:\Assingment\SimpleMapperSir\bin\Debug\net7.0\SimpleMapperSir.runtimeconfig.json
+F:\Assingment\SimpleMapperSir\bin\Debug\net7.0\SimpleMapperSir.dll
+F:\Assingment\SimpleMapperSir\bin\Debug\net7.0\SimpleMapperSir.pdb
+F:\Assingment\SimpleMapperSir\bin\Debug\net7.0\Newtonsoft.Json.dll
+F:\Assingment\SimpleMapperSir\obj\Debug\net7.0\SimpleMapperSir.csproj.CopyComplete
+F:\Assingment\SimpleMapperSir\obj\Debug\net7.0\SimpleMapperSir.dll
+F:\Assingment\SimpleMapperSir\obj\Debug\net7.0\refint\SimpleMapperSir.dll
+F:\Assingment\SimpleMapperSir\obj\Debug\net7.0\SimpleMapperSir.pdb
+F:\Assingment\SimpleMapperSir\obj\Debug\net7.0\SimpleMapperSir.genruntimeconfig.cache
+F:\Assingment\SimpleMapperSir\obj\Debug\net7.0\ref\SimpleMapperSir.dll

@@ -8,9 +8,14 @@ namespace SimpleMapperSir
 {
     public class Room
     {
-        public string RoomNumber { get; set; }
+        public int RoomNumber { get; set; }
         
         public List<Window> Windows { get; set; }
         public string[] Features { get; set; }
+
+        public Room(int roomNumber)
+        {
+            RoomNumber = roomNumber;
+        }
     }
 }

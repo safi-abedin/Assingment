@@ -89,13 +89,12 @@ namespace SimpleMapperSir
                 if (item is IEnumerable innerArray && elementType.GetElementType() is not null)
                 {
                     var arrayElementType = elementType.GetElementType();
-                    Console.WriteLine(arrayElementType.Name);
                     var array = Array.CreateInstance(arrayElementType, innerArray.Cast<object>().Count());
 
                     int index = 0;
                     foreach (var innerItem in innerArray)
                     {
-                        var innerDest = Activator.CreateInstance(arrayElementType);
+                        var innerDest = CreateInstanceByConstructor(innerItem);
                         Copy(innerItem, innerDest);
                         array.SetValue(innerDest, index);
                         index++;
@@ -111,7 +110,8 @@ namespace SimpleMapperSir
                 else
                 {
                     // For complex types, recursively copy
-                    var newItem = Activator.CreateInstance(destProperty.PropertyType.GenericTypeArguments[0]);
+                    //var newItem = Activator.CreateInstance(destProperty.PropertyType.GenericTypeArguments[0]);
+                    var newItem = CreateInstanceByConstructor(item);
                     Copy(item, newItem);
                     destList.Add(newItem);
                 }
@@ -129,5 +129,30 @@ namespace SimpleMapperSir
             Array.Copy(srcListToArray, instance, srcListToArray.Length);
             destProperty.SetValue(destination, instance);
         }
+
+        private static object CreateInstanceByConstructor(object value)
+        {
+            var objectType = value.GetType();
+
+            ConstructorInfo constructor = objectType.GetConstructors().FirstOrDefault();
+            ParameterInfo[] parameters = constructor.GetParameters();
+            object[] values = new object[parameters.Length];
+
+            for(var i = 0; i < parameters.Length; i++)
+            {
+                if (parameters[i].ParameterType.IsValueType)
+                {
+                    object obj = Activator.CreateInstance(parameters[i].ParameterType);
+                    values[i] = obj;
+                }
+                else
+                {
+                    values[i] = null;
+                }
+            }
+            object instance = constructor.Invoke(values);
+            return instance;
+        }
+
     }
 }
